@@ -26,6 +26,7 @@ install:
   - git clone git://github.com/mortberg/cubicaltt
   - cd cubicaltt
   - git checkout hcomptrans
+  - stack init
   - stack build
   - ls ./.stack-work/dist/x86_64-linux
   - cd ..
