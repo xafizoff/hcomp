@@ -15,6 +15,7 @@ cache:
 addons:
   apt:
     packages:
+      - nbfc
       - libgmp-dev
 
 before_install:
@@ -29,6 +30,9 @@ install:
   - stack init
   - printf "\nextra-deps:\n" >> stack.yaml
   - printf "  - BNFC-2.8.1\n" >> stack.yaml
+  - cabal install alex happy bnfc
+  - cabal install
+  - ls
   - stack build
   - ls ./.stack-work/dist/x86_64-linux
   - cd ..
