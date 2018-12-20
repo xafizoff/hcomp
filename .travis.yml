@@ -15,7 +15,7 @@ cache:
 addons:
   apt:
     packages:
-      - nbfc
+      - bnfc
       - libgmp-dev
 
 before_install:
